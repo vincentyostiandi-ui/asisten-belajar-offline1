@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asisten Belajar Offline - Bahan Latihan P13</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="desktop-viewport">
+    <div class="app-window">
+      <!-- Window Header Bar with Mac-style controls & URL bar -->
+      <header class="window-header">
+        <div class="window-dots">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <div class="url-bar-container">
+          <div class="url-bar">file:///C:/BahanP13/asisten_belajar.html</div>
+        </div>
+      </header>
+
+      <!-- Main Body: Sidebar + Content Area -->
+      <div class="window-body">
+        <!-- Left Sidebar: 10 Modul Tersedia -->
+        <aside class="sidebar">
+          <div class="sidebar-title">10 MODUL TERSEDIA</div>
+          <ul class="module-nav-list" id="moduleNavList">
+            <!-- Dynamically populated or static fallbacks -->
+          </ul>
+        </aside>
+
+        <!-- Right Content Area -->
+        <main class="content-area">
+          <!-- Top Tab Navigation -->
+          <nav class="top-tab-bar">
+            <button class="tab-btn active" id="tabChatBtn">
+              <span class="tab-icon-chat">💬</span>
+              <span>AI Chatbot</span>
+            </button>
+            <button class="tab-btn" id="tabQuizBtn">
+              <span class="tab-icon-quiz">?</span>
+              <span>Generator Kuis</span>
+            </button>
+          </nav>
+
+          <!-- Tab Panel 1: AI Chatbot -->
+          <section class="tab-panel active" id="panelChat">
+            <div class="chat-scroll-area" id="chatScrollArea">
+              <!-- Default Initial Message -->
+              <div class="msg-row ai">
+                <div class="avatar-ai">AI</div>
+                <div class="bubble-ai">
+                  <p>Halo! Saya Asisten Belajar Offline. Pilih modul di sidebar kiri, lalu ketik pertanyaanmu atau klik Rangkum.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Chat Input Bar -->
+            <div class="chat-bottom-bar">
+              <input
+                type="text"
+                id="chatInput"
+                class="chat-input-field"
+                placeholder="Ketik pertanyaanmu di sini..."
+                value="Apa itu renin dan apa bedanya dengan pepsin?"
+              />
+              <button id="btnKirim" class="btn-primary-teal">Kirim</button>
+              <button id="btnRangkum" class="btn-primary-teal">Rangkum</button>
+            </div>
+          </section>
+
+          <!-- Tab Panel 2: Generator Kuis -->
+          <section class="tab-panel" id="panelQuiz">
+            <div class="quiz-panel-content">
+              <!-- Meta Header -->
+              <div class="quiz-meta-row">
+                <span class="quiz-progress-text" id="quizProgressText">Soal 3 dari 5 • Modul_02_Biologi</span>
+                <span class="quiz-score-badge" id="quizScoreBadge">Skor: 2/2</span>
+              </div>
+
+              <!-- Progress Bar -->
+              <div class="quiz-progress-track">
+                <div class="quiz-progress-fill" id="quizProgressFill" style="width: 60%;"></div>
+              </div>
+
+              <!-- Question Title -->
+              <h3 class="quiz-question-title" id="quizQuestionTitle">
+                Organ manakah yang menghasilkan enzim lipase, amilase, dan tripsin untuk pencernaan di usus halus?
+              </h3>
+
+              <!-- Options List -->
+              <div class="quiz-options-container" id="quizOptionsContainer">
+                <!-- Dynamically rendered -->
+              </div>
+
+              <!-- Feedback Banner -->
+              <div class="quiz-feedback-card" id="quizFeedbackCard">
+                <div class="feedback-stat-number" id="feedbackScoreNum">2</div>
+                <div class="feedback-message-text" id="feedbackMessageText">
+                  2 dari 2 soal benar sejauh ini. Jawaban benar: Pankreas. Lanjut ke soal 4.
+                </div>
+                <button class="btn-next-question" id="btnNextQuestion">Lanjut &rarr;</button>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/modules_data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
